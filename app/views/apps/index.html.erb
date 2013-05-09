@@ -1,12 +1,12 @@
 
 <ul>
 <% @apps.each do |app| %>
-  <li>
+  <a href="<%= app.application_url %>"><li>
     <div class="description">
       <h3><%= app.name %></h3>
       <p><%= app.description %></p>
     </div>
     <img src="<%= app.image %>">
-  </li>
+  </li></a>
 <% end %>
 </ul>
