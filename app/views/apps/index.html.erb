@@ -1,0 +1,9 @@
+
+<ul>
+<% @apps.each do |app| %>
+  <li>
+    <h3><%= app.name %></h3>
+    <img src="<%= app.image %>">
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NolaApps</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "space", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <h1>Nola Apps</h1>
+    <button class="submission btn btn-primary btn-large" onclick="window.location='/apps/new'">Submit Your App</button>
+  </header>
+  <div class="container">
+<%= yield %>
+  </div>
+</body>
+</html>

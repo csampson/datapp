@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @app.name %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @app.organization %>
+</p>
+
+<p>
+  <b>Organization site:</b>
+  <%= @app.organization_site %>
+</p>
+
+<p>
+  <b>Application url:</b>
+  <%= @app.application_url %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @app.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Back', apps_path %>
