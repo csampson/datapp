@@ -2,7 +2,7 @@ class AppsController < ApplicationController
   # GET /apps
   # GET /apps.json
   def index
-    @apps = App.all
+    @apps = App.published
 
     respond_to do |format|
       format.html # index.html.erb
