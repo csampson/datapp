@@ -2,7 +2,10 @@
 <ul>
 <% @apps.each do |app| %>
   <li>
-    <h3><%= app.name %></h3>
+    <div class="description">
+      <h3><%= app.name %></h3>
+      <p><%= app.description %></p>
+    </div>
     <img src="<%= app.image %>">
   </li>
 <% end %>

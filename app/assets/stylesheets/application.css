@@ -41,14 +41,22 @@ ul {
 li {
   margin-top: 20px;
   list-style: none;
+  border-style: solid;
+  border-width: 1px;
+  overflow: auto;
 }
 
-li h3 {
+li .description {
+  margin: 10px;
   float: left;
+  max-width: 200px;
 }
 
 li img {
-  float: left;
+  float: right;
   margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
