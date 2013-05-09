@@ -51,13 +51,14 @@ li {
 }
 
 li:hover {
-          -moz-box-shadow: 0 0 5px 5px #ccc;
-          -webkit-box-shadow: 0 0 5px 5px #ccc;
-          box-shadow: 0 0 5px 5px #ccc;
+  -moz-box-shadow: 0 0 5px 5px #ccc;
+  -webkit-box-shadow: 0 0 5px 5px #ccc;
+  box-shadow: 0 0 5px 5px #ccc;
 }
 
 li .description {
-  margin: 10px;
+  margin-left: 30px;
+  margin-top: 0px;
   float: left;
   max-width: 200px;
 }
