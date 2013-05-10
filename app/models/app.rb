@@ -9,7 +9,7 @@ class App < ActiveRecord::Base
   def publish!
     self.published = true
     save!
-    #Twitter.update("#{organization} just published an app. Check out #{name} here http://nola-apps.com/apps/#{id}")
+    #Twitter.update("We just published a new app from #{organization}. Check out #{name} here http://nola-apps.com/apps/#{id}")
   end
 
 end
