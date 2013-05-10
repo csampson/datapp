@@ -17,6 +17,7 @@ end
 gem 'activeadmin'
 gem 'twitter'
 gem 'paperclip'
+gem 'aws-sdk', '~> 1.5.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
