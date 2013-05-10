@@ -1,7 +1,7 @@
 class AppsController < ApplicationController
 
   def index
-    @apps = App.published
+    @apps = App.published.order('created_at DESC')
   end
 
   def show
@@ -17,6 +17,7 @@ class AppsController < ApplicationController
     @app = App.new(params[:app])
 
     if @app.save
+      AdminMailer.app_submitted(@app).deliver
       redirect_to @app, notice: 'App was successfully created.'
     else
       render action: "new"

@@ -82,4 +82,13 @@ NolaApps::Application.configure do
     config.oauth_token_secret = ENV['TWITTER_ACCESS_SECRET']
   end
 
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.sendgrid.net",
+    :port => 25,
+    :domain => "nola-apps.com",
+    :authentication => :plain,
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV["SENDGRID_PASSWORD"]
+  }
+
 end
