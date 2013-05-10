@@ -34,11 +34,11 @@ header h1 {
   right: 34px;
 }
 
-ul {
+.apps ul {
   margin-top: 40px;
 }
 
-li {
+.apps li {
   margin-top: 20px;
   list-style: none;
   border-style: solid;
@@ -50,20 +50,20 @@ li {
           box-shadow: 0 8px 6px -6px black;
 }
 
-li:hover {
-  -moz-box-shadow: 0 0 5px 5px #ccc;
-  -webkit-box-shadow: 0 0 5px 5px #ccc;
-  box-shadow: 0 0 5px 5px #ccc;
+.apps li:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
 }
 
-li .description {
+.apps li .description {
   margin-left: 30px;
   margin-top: 0px;
   float: left;
   max-width: 200px;
 }
 
-.app_image {
+.apps .app_image {
   float: right;
   margin-left: 20px;
   margin-top: 10px;
@@ -74,7 +74,7 @@ li .description {
   border-width: 1px;
 }
 
-.app_image img {
+.apps .app_image img {
   margin: 10px;
 }
 

@@ -1,41 +1,51 @@
-<%= form_for(@app) do |f| %>
-  <% if @app.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+<%= form_for(@app, :html => { :class => "form-horizontal well" }) do |f| %>
+  <fieldset>
 
-      <ul>
-      <% @app.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <% if @app.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+
+        <ul>
+        <% @app.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="control-group">
+      <%= f.label :name, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :name, :class => "input-xlarge" %>
+      </div>
     </div>
-  <% end %>
+    <div class="control-group">
+      <%= f.label :description, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_area :description, :class => "input-xlarge" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :developer, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :developer, :class => "input-xlarge" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :application_url, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :application_url, :class => "input-xlarge" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :image, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :image, :class => "input-xlarge" %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :organization %><br />
-    <%= f.text_field :organization %>
-  </div>
-  <div class="field">
-    <%= f.label :organization_site %><br />
-    <%= f.text_field :organization_site %>
-  </div>
-  <div class="field">
-    <%= f.label :application_url %><br />
-    <%= f.text_field :application_url %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </fieldset>
 <% end %>
