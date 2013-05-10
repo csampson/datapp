@@ -6,7 +6,6 @@ class App < ActiveRecord::Base
   def publish!
     self.published = true
     save!
-    binding.pry
     Twitter.update("#{organization} just published an app. Check it out #{name} here http://nola-apps.com/apps/#{id}")
   end
 
