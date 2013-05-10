@@ -6,7 +6,7 @@
       <h3><%= app.name %></h3>
       <p><%= app.description %></p>
     </div>
-    <div class="app_image"><img src="<%= app.image %>"></div>
+    <div class="app_image"><img src="<%= app.image.url(:medium) %>"></div>
   </li></a>
 <% end %>
 </ul>
