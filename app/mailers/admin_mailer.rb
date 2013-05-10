@@ -1,5 +1,6 @@
 class AdminMailer < ActionMailer::Base
   include SendGrid
+  default :from => "mailer@nola-apps.com"
 
   def app_submitted(app)
     @domain = 'nola-apps.com'
