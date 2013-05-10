@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 group :production do
   gem 'pg'
+  gem 'unicorn'
+  gem 'aws-sdk', '~> 1.5.7'
 end
 
 group :development do
@@ -17,7 +19,6 @@ end
 gem 'activeadmin'
 gem 'twitter'
 gem 'paperclip'
-gem 'aws-sdk', '~> 1.5.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
