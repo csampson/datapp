@@ -40,6 +40,7 @@ class AppsController < ApplicationController
   # POST /apps
   # POST /apps.json
   def create
+    params.delete :published
     @app = App.new(params[:app])
 
     respond_to do |format|
