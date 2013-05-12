@@ -124,15 +124,25 @@
       margin: 1em 0;
     }
 
+    input, textarea, button[type='submit'] {
+      display: block;
+    }
+
     input[type='text'], textarea, button[type='submit'] {
       box-sizing: border-box;
       width: 25em;
       margin-top: 0.25em;
-      display: block;
     }
 
     button[type='submit'] {
       padding: 0.75em 3em;
+      margin-top: 2em;
+    }
+
+    // move later
+    .field_with_errors label {
+      color: #A63232;
+      font-weight: bold;
     }
   }
 }

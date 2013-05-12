@@ -1,7 +1,10 @@
 <%= form_for @app do |f| %>
   <% if @app.errors.any? %>
     <div class='form-errors'>
-      <p>Hm, looks like there's <%= pluralize(@app.errors.count, "issues") %> with this submission:</p>
+      <p>
+        <span class='icon-warning-sign icon'></span>
+        Hm, looks like there's <strong><%= pluralize(@app.errors.count, "issues") %></strong> with this submission:
+      </p>
 
       <ul class='bulleted'>
         <% @app.errors.full_messages.each do |msg| %>
@@ -19,7 +22,7 @@
 
     <li>
       <%= f.label :description %>
-      <%= f.text_area :description, :rows => 3 %>
+      <%= f.text_area :description %>
     </li>
 
     <li>
@@ -39,6 +42,7 @@
 
     <li>
       <%= f.label :image, 'Image' %>
+      <span class='hint-text'>(4:3 aspect ratio and at least 280x210 is ideal)</span>
       <%= f.file_field :image %>
     </li>
   </ul>

@@ -41,7 +41,7 @@ ul {
 
   &.bulleted {
     list-style: disc;
-    padding-left: 1em;
+    padding-left: 1.5em;
   }
 }
 
@@ -55,6 +55,11 @@ ul {
   content: '';
   clear: both;
   display: block;
+}
+
+.icon {
+  color: #7A5281;
+  &.icon-warning-sign { color: #A63232; }
 }
 
 .btn {
@@ -101,4 +106,9 @@ ul {
 .pitch-text {
   text-shadow: 0 1px white;
   font-size: 200%;
+}
+
+.hint-text {
+  color: #AAA;
+  font-size: 85%;
 }
