@@ -83,9 +83,19 @@ ul {
 .page-box {
   @extend .white-box;
   width: 75em;
+  padding-bottom: 1em;
   margin: 1em auto;
   box-sizing: border-box;
   display: table;
+
+  h2 {
+    font-size: 200%;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+    padding: 1em 0;
+    margin: 0 1em;
+  }
 }
 
 .pitch-text {
