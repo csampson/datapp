@@ -103,8 +103,8 @@
 
     .view-app {
       text-align: center;
-      height: 2em;
-      line-height: 2em;
+      height: 1.5em;
+      line-height: 1.5em;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -156,5 +156,22 @@
 
   .return {
     padding: 1em 3em;
+  }
+}
+
+.app-show {
+  h2 {
+    text-align: left;
+    padding: 0.5em 0;
+  }
+
+  .app-image {
+    border-radius: 4px;
+    float: left;
+    margin-right: 1em;
+  }
+
+  .app-details {
+    overflow: hidden;
   }
 }

@@ -1,35 +1,13 @@
-<p id="notice"><%= notice %></p>
+<a class='btn wide' href='/'>Back to listings</a>
 
-<p>
-  <b>Name:</b>
-  <%= @app.name %>
-</p>
+<div class='app-show page-box'>
+  <%= image_tag @app.image.url(:medium), :class => 'app-image', :alt => '' %>
 
-<p>
-  <b>Description:</b>
-  <%= @app.description %>
-</p>
+  <div class='app-details'>
+    <h2><%= @app.name %></h2>
+    <p>by <%= @app.developer %></p>
+    <p><%= @app.description %></p>
 
-<p>
-  <b>Organization:</b>
-  <%= @app.organization %>
-</p>
-
-<p>
-  <b>Organization site:</b>
-  <%= @app.organization_site %>
-</p>
-
-<p>
-  <b>Application url:</b>
-  <%= @app.application_url %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @app.image %>
-</p>
-
-
-<%= link_to 'Edit', edit_app_path(@app) %> |
-<%= link_to 'Back', apps_path %>
+    <%= link_to 'Visit', @app.application_url, :class => 'btn wide' %>
+  </div>
+</div>
