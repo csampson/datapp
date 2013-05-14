@@ -18,7 +18,6 @@ class AppsController < ApplicationController
 
     if @app.save
       AdminMailer.app_submitted(@app).deliver
-      #redirect_to @app, notice: 'App was successfully created.'
       render action: "confirmation"
     else
       render action: "new"
