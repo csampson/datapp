@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
+h2 {
+  font-size: 200%;
+  font-weight: normal;
+}
+
 a, button {
   cursor: pointer;
 }
@@ -93,18 +98,20 @@ ul {
 .page-box {
   @extend .white-box;
   width: 75em;
-  padding: 1em;
+  padding: 0 1em 1em;
   margin: 1em auto;
   box-sizing: border-box;
   display: table;
 
-  h2 {
-    font-size: 200%;
-    font-weight: normal;
+  .page-header {
     text-align: center;
     border-bottom: 1px solid #DDD;
     padding: 1em 0;
     margin: 0;
+
+    h2 {
+      margin: 0;
+    }
   }
 }
 
@@ -114,6 +121,6 @@ ul {
 }
 
 .hint-text {
-  color: #AAA;
+  color: #888;
   font-size: 85%;
 }

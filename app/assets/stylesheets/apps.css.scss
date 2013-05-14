@@ -111,7 +111,7 @@
   }
 }
 
-.submit-app {
+.app-submit {
   @extend .white-box;
 
   form {
@@ -158,15 +158,27 @@
 }
 
 .app-show {
-  h2 {
+  padding-top: 1em;
+
+  .page-header {
     text-align: left;
-    padding: 0.5em 0;
+    padding-top: 0;
+  }
+
+  .app-author {
+    margin: 0;
   }
 
   .app-image {
     border-radius: 4px;
+    max-width: 45em; // approximation
     float: left;
     margin-right: 1em;
+  }
+
+  .visit-app {
+    float: right;
+    margin-top: 0.5em; // approximation
   }
 
   .app-details {
