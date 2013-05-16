@@ -1,57 +1,51 @@
-<%= form_for(@app, :html => { :multipart => true, :class => "form-horizontal well" }) do |f| %>
-  <fieldset>
+<%= form_for @app do |f| %>
+  <% if @app.errors.any? %>
+    <div class='form-errors'>
+      <p>
+        <span class='icon-warning-sign icon'></span>
+        Hm, looks like there's <strong><%= pluralize(@app.errors.count, "issues") %></strong> with this submission:
+      </p>
 
-    <% if @app.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
-
-        <ul>
+      <ul class='bulleted'>
         <% @app.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
-        </ul>
-      </div>
-    <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-    <div class="control-group">
-      <%= f.label :name, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :name, :class => "input-xlarge" %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :description, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_area :description, :class => "input-xlarge" %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :developer, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :developer, :class => "input-xlarge" %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :contact_email, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :contact_email, :class => "input-xlarge" %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :application_url, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :application_url, :class => "input-xlarge" %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :image, :class => "control-label" %>
-      <div class="controls">
-        <%= f.file_field :image, :class => "input-xlarge" %>
-      </div>
-    </div>
-    <div class="form-actions">
-      <%= f.submit :class => "btn btn-primary" %>
-    </div>
+  <ul class='fields'>
+    <li>
+      <%= f.label :name, 'Application name' %>
+      <%= f.text_field :name %>
+    </li>
 
-  </fieldset>
+    <li>
+      <%= f.label :description %>
+      <%= f.text_area :description, :rows => 2 %>
+    </li>
+
+    <li>
+      <%= f.label :developer %>
+      <%= f.text_field :developer %>
+    </li>
+
+    <li>
+      <%= f.label :contact_email %>
+      <%= f.text_field :contact_email %>
+    </li>
+
+    <li>
+      <%= f.label :application_url %>
+      <%= f.text_field :application_url %>
+    </li>
+
+    <li>
+      <%= f.label :image, 'Image' %>
+      <span class='hint-text'>(4:3 aspect ratio and at least 280x210 is ideal)</span>
+      <%= f.file_field :image %>
+    </li>
+  </ul>
+
+  <button class='btn' type='submit'>Submit</button>
 <% end %>

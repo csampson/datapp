@@ -1,3 +1,193 @@
 // Place all the styles related to the Apps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('//fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700');
+@import 'base';
+
+.page-content {
+  width: 75em;
+  margin: 1em auto;
+}
+
+.main-header {
+  border-bottom: 1px solid #DDD;
+  background: white;
+  text-align: right;
+
+  // hm, naughty selector
+  div {
+    width: 75em;
+    height: 48px;
+    line-height: 48px;
+    padding: 1em;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 150%;
+    margin: 0;
+    float: left;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      // move anchor focus styling at some point
+      &:focus {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .twitter-follow-button {
+    vertical-align: middle;
+  }
+}
+
+.pitch {
+  @extend .clearfix;
+  padding: 1em 0 2em;
+
+  p {
+    overflow: hidden;
+  }
+
+  a {
+    font-size: 125%;
+    padding: 0.75em 2em;
+    margin-top: 1.5em;
+    float: right;
+  }
+}
+
+.apps {
+  @extend .clearfix;
+
+  .app-listing {
+    @extend .white-box;
+    padding: 0.5em;
+    width: 37em;
+    margin-bottom: 1em;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &:nth-child(even) {
+      margin-left: 1em;
+    }
+
+    // maintains 4:3 aspect ratio
+    img {
+      border-radius: 4px;
+      width: 20em;
+      height: 15em;
+      margin-right: 1ex;
+      float: left;
+    }
+
+    .app-details {
+      height: 15em;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .app-name {
+      font-size: 115%;
+      margin: 0;
+    }
+
+    .app-developer {
+      color: #888;
+      font-size: 85%;
+      margin-top: 0;
+    }
+
+    .view-app {
+      text-align: center;
+      height: 1.5em;
+      line-height: 1.5em;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.app-submit {
+  @extend .white-box;
+
+  form {
+    display: table;
+    margin: 1em auto;
+
+    .fields > li {
+      margin: 1em 0;
+    }
+
+    input, textarea, button[type='submit'] {
+      display: block;
+    }
+
+    input[type='text'], textarea, button[type='submit'] {
+      box-sizing: border-box;
+      width: 25em;
+      margin-top: 0.25em;
+    }
+
+    button[type='submit'] {
+      padding: 0.75em 3em;
+      margin-top: 2em;
+    }
+
+    // move later
+    .field_with_errors label {
+      color: #A63232;
+      font-weight: bold;
+    }
+  }
+}
+
+.app-confirmation {
+  text-align: center;
+
+  .confirmation-message {
+    margin: 2em 0;
+  }
+
+  .return {
+    padding: 1em 3em;
+  }
+}
+
+.app-show {
+  padding-top: 1em;
+
+  .page-header {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .app-author {
+    margin: 0;
+  }
+
+  .app-image {
+    border-radius: 4px;
+    max-width: 45em; // approximation
+    float: left;
+    margin-right: 1em;
+  }
+
+  .visit-app {
+    float: right;
+    margin-top: 0.5em; // approximation
+  }
+
+  .app-details {
+    overflow: hidden;
+  }
+}
