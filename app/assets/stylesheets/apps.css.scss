@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('//fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700');
-@import 'base';
-
 .page-content {
   width: 75em;
   margin: 1em auto;
@@ -72,7 +69,7 @@
     width: 37em;
     margin-bottom: 1em;
     float: left;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
     overflow: hidden;
 
     &:nth-child(even) {
@@ -133,7 +130,7 @@
     }
 
     input[type='text'], textarea, button[type='submit'] {
-      box-sizing: border-box;
+      @include box-sizing(border-box);
       width: 25em;
       margin-top: 0.25em;
     }

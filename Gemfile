@@ -17,6 +17,7 @@ gem 'activeadmin'
 gem 'twitter'
 gem 'paperclip'
 gem 'sendgrid'
+gem 'bourbon'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

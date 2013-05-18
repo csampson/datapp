@@ -197,6 +197,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   aws-sdk (~> 1.5.7)
+  bourbon
   coffee-rails (~> 3.2.1)
   jquery-rails
   paperclip
