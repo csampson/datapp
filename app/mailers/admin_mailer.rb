@@ -5,14 +5,12 @@ class AdminMailer < ActionMailer::Base
   def app_submitted(app)
     @domain = 'nola-apps.com'
     @app = app
-    AdminUser.all.each do |user|
-      mail :to => user.email, :subject => "App Submitted: '#{@app.name}' :-)"
-    end
+    mail :to => @app.contact_email, :cc => AdminUser.all.map(&:email), :subject => "App Submitted: '#{@app.name}' :-)"
   end
 
   def app_published(app)
     @domain = 'nola-apps.com'
     @app = app
-    mail :to => app.contact_email, :subject => "App Published: '#{@app.name}' :-)"
+    mail :to => @app.contact_email, :subject => "App Published: '#{@app.name}' :-)"
   end
 end
