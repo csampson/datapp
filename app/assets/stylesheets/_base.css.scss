@@ -56,12 +56,6 @@ ul {
   text-shadow: none;
 }
 
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
 .icon {
   color: #7A5281;
   &.icon-warning-sign { color: #A63232; }
@@ -123,9 +117,4 @@ ul {
 .hint-text {
   color: #888;
   font-size: 85%;
-}
-
-.anchor-reset {
-  color: inherit;
-  text-decoration: none;
 }
