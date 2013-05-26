@@ -26,8 +26,12 @@
     </li>
 
     <li>
-      <%= f.label :developer %>
-      <%= f.text_field :developer %>
+      <%= f.label :developer, 'Twitter handle' %>
+      <span class='hint-text'>(this is how you'll be identified)</span>
+      <span class='prepended-input'>
+        <span class='symbol'>@</span>
+        <%= f.text_field :developer %>
+      </span>
     </li>
 
     <li>

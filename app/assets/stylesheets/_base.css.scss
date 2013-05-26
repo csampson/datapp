@@ -118,3 +118,23 @@ ul {
   color: #888;
   font-size: 85%;
 }
+
+// Input element with a prepended symbol
+.prepended-input {
+  display: inline-block;
+  position: relative;
+
+  .symbol {
+    color: #888;
+    font-size: 1.35em;
+    line-height: 1;
+    padding: 0.56em;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  input {
+    padding-left: 2em;
+  }
+}
