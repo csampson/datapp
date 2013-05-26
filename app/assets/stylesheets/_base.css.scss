@@ -56,12 +56,6 @@ ul {
   text-shadow: none;
 }
 
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
 .icon {
   color: #7A5281;
   &.icon-warning-sign { color: #A63232; }

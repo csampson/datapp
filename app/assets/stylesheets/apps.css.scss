@@ -26,17 +26,22 @@
     font-size: 150%;
     margin: 0;
     float: left;
+  }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+  a {
+    @include anchor-reset;
 
-      // move anchor focus styling at some point
-      &:focus {
-        outline: none;
-        text-decoration: underline;
-      }
+    // move anchor focus styling at some point
+    &:focus {
+      outline: none;
+      text-decoration: underline;
     }
+  }
+
+  .about {
+    border-right: 1px solid #CCC;
+    padding-right: 1ex;
+    margin-right: 1ex;
   }
 
   .twitter-follow-button {
@@ -45,7 +50,7 @@
 }
 
 .pitch {
-  @extend .clearfix;
+  @include clearfix;
   padding: 1em 0 2em;
 
   p {
@@ -61,7 +66,7 @@
 }
 
 .apps {
-  @extend .clearfix;
+  @include clearfix;
 
   .app-listing {
     @extend .white-box;

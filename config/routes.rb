@@ -2,6 +2,8 @@ NolaApps::Application.routes.draw do
   resources :apps
   root :to => 'apps#index'
 
+  match '/about' => 'pages#about'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
