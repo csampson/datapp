@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="164.0985"
+   height="45.408001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/vaerros/projects/datapp/app/assets/images/logo.png"
+   inkscape:export-xdpi="51.532768"
+   inkscape:export-ydpi="51.532768">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.99"
+     inkscape:cx="-78.227506"
+     inkscape:cy="43.641388"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="844"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-183.5495,-349.96137)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#a720be;fill-opacity:1;stroke:none;font-family:Kimberley;-inkscape-font-specification:Kimberley Heavy"><flowRegion
+         id="flowRegion2987"><rect
+           id="rect2989"
+           width="511.42856"
+           height="390"
+           x="181.42857"
+           y="336.64789"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;fill:#a720be;font-family:Kimberley;-inkscape-font-specification:Kimberley Heavy;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara2991"><flowSpan
+           style="fill:#ffffff;fill-opacity:1"
+           id="flowSpan3782">Dat</flowSpan><flowSpan
+           style="fill:#7a5281;fill-opacity:1"
+           id="flowSpan3810">App</flowSpan></flowPara></flowRoot>  </g>
+</svg>
