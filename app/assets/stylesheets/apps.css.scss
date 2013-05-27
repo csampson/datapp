@@ -9,7 +9,7 @@
 
 .main-header {
   border-bottom: 1px solid #FAFAFA;
-  background: #272727;
+  background: #111625;
   color: #FFF;
   text-align: right;
 
@@ -26,6 +26,10 @@
     font-size: 175%;
     margin: 0;
     float: left;
+
+    img {
+      vertical-align: middle;
+    }
   }
 
   a {
@@ -40,7 +44,7 @@
   }
 
   .about {
-    border-right: 1px solid #CCC;
+    border-right: 1px solid #555;
     padding-right: 1ex;
     margin-right: 1ex;
   }
