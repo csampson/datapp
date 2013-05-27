@@ -178,6 +178,8 @@
   }
 
   .app-author {
+    @extend .hint-text;
+    font-size: 100%;
     margin: 0;
   }
 
