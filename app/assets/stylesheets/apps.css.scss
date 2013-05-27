@@ -8,8 +8,9 @@
 }
 
 .main-header {
-  border-bottom: 1px solid #DDD;
-  background: white;
+  border-bottom: 1px solid #FAFAFA;
+  background: #272727;
+  color: #FFF;
   text-align: right;
 
   .inner {
@@ -22,7 +23,7 @@
   }
 
   h1 {
-    font-size: 150%;
+    font-size: 175%;
     margin: 0;
     float: left;
   }
