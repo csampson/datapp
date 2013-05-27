@@ -30,6 +30,7 @@
 
   a {
     @include anchor-reset;
+    font-weight: normal;
 
     // move anchor focus styling at some point
     &:focus {
