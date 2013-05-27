@@ -1,4 +1,4 @@
-<div class='pitch'>
+<div class='main-pitch'>
   <a href='/apps/new' class='btn'>Submit Your App</a>
   <p class='pitch-text'>A showcase of awesome apps made right here in New Orleans</p>
 </div>
@@ -6,13 +6,13 @@
 <ul class='apps'>
 <% @apps.each do |app| %>
   <li class='app-listing'>
-    <img src="<%= app.image.url(:medium) %>" alt="" />
+    <a href='<%= url_for app %>'><img src="<%= app.image.url(:medium) %>" alt="" /></a>
 
     <div class="app-details">
       <h2 class='app-name'><%= app.name %></h2>
       <p class='app-developer'>by <%= app.developer %></p>
       <p class='app-description'><%= app.description %></p>
-      <%= link_to 'View', app_path(app), :class => 'view-app btn' %>
+      <%= link_to 'View', url_for(app), :class => 'view-app btn' %>
     </div>
   </li>
 <% end %>
