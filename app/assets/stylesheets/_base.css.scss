@@ -103,11 +103,8 @@ ul {
 
 .page-box {
   @extend .white-box;
-  width: 75em;
   padding: 0 1em 1em;
-  margin: 1em auto;
-  box-sizing: border-box;
-  display: table;
+  margin: 1em 0;
 
   .page-header {
     text-align: center;

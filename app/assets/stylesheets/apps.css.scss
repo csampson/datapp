@@ -175,6 +175,7 @@
 }
 
 .app-show {
+  @include clearfix;
   padding-top: 1em;
 
   .page-header {
