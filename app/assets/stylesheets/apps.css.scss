@@ -252,6 +252,7 @@
 .app-show {
   @include clearfix;
   padding-top: 1em;
+  position: relative;
 
   .page-header {
     text-align: left;
@@ -269,11 +270,25 @@
     max-width: 45em; // approximation
     float: left;
     margin-right: 1em;
+
+    @include respond-to(tiny-screen) {
+      max-width: 100%;
+      margin: 0 auto 1em;
+      display: block;
+      float: none;
+    }
   }
 
   .visit-app {
-    float: right;
-    margin-top: 0.5em; // approximation
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    @include respond-to(small-screen) {
+      text-align: center;
+      display: block;
+      position: static;
+    }
   }
 
   .app-details {

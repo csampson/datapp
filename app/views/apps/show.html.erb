@@ -3,12 +3,13 @@
 
   <div class='app-details'>
     <header class='page-header'>
-      <%= link_to 'Visit', @app.application_url, :class => 'visit-app btn wide' %>
       <h2><%= @app.name %></h2>
       <p class='app-author'>by <%= @app.developer %></p>
     </header>
 
     <p><%= @app.description %></p>
+
+    <%= link_to 'Visit', @app.application_url, :class => 'visit-app btn wide' %>
   </div>
 </div>
 
