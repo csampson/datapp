@@ -202,6 +202,10 @@
     display: table;
     margin: 1em auto;
 
+    @include respond-to(small-screen) {
+      display: block;
+    }
+
     .fields > li {
       margin: 1em 0;
     }
@@ -214,6 +218,10 @@
       @include box-sizing(border-box);
       width: 25em;
       margin-top: 0.25em;
+
+      @include respond-to(small-screen) {
+        width: 100%;
+      }
     }
 
     button[type='submit'] {
