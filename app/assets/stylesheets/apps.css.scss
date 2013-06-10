@@ -246,6 +246,10 @@
 
   .return {
     padding: 1em 3em;
+
+    @include respond-to(tiny-screen) {
+      display: block;
+    }
   }
 }
 
