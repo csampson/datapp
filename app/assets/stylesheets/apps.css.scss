@@ -5,6 +5,9 @@
 .page-content {
   width: 75em;
   margin: 1em auto;
+
+  @include respond-to(small-screen) { width: auto; }
+  @include respond-to(medium-screen) { width: auto; padding: 0 1em; }
 }
 
 .main-header {
@@ -20,6 +23,9 @@
     padding: 1em;
     margin: 0 auto;
     overflow: hidden;
+
+    @include respond-to(small-screen) { width: auto; }
+    @include respond-to(medium-screen) { width: auto; }
   }
 
   h1 {
@@ -62,25 +68,51 @@
   padding: 2.5em;
   margin: 2.5em 0;
 
+  @include respond-to(medium-screen) {
+    text-align: center;
+  }
+
   p {
     margin: 0.25em;
-    overflow: hidden;
+    float: left;
+
+    @include respond-to(medium-screen) {
+      margin-bottom: 1em;
+    }
   }
 
   a {
     font-size: 125%;
     padding: 0.75em 2em;
     float: right;
+
+    @include respond-to(medium-screen) {
+      float: none;
+      clear: left;
+    }
+
+    @include respond-to(small-screen) {
+      display: block;
+    }
   }
 }
 
 .apps {
   @include clearfix;
 
+  @include respond-to(medium-screen) {
+    @include display-box;
+  }
+
+  @include respond-to(small-screen) {
+    display: block;
+  }
+
   .app-listing {
     @extend .white-box;
     padding: 0.5em;
     width: 37em;
+    height: 15em;
     margin-bottom: 1em;
     float: left;
     @include box-sizing(border-box);
@@ -90,17 +122,47 @@
       margin-left: 1em;
     }
 
+    @include respond-to(medium-screen) {
+      @include box-flex(2);
+      float: none;
+    }
+
+    @include respond-to(small-screen) {
+      @include box-flex(none);
+      width: 100%;
+      &:nth-child(even) { margin: 0; }
+    }
+
+    @include respond-to(tiny-screen) {
+      width: auto;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+
+      &:nth-child(even) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
     // maintains 4:3 aspect ratio
     img {
       border-radius: 4px;
       width: 20em;
-      height: 15em;
+      height: 100%;
       margin-right: 1ex;
       float: left;
+
+      @include respond-to(tiny-screen) {
+        width: auto;
+        height: auto;
+        float: none;
+      }
     }
 
     .app-details {
-      height: 15em;
+      height: 100%;
       overflow: hidden;
       position: relative;
     }
@@ -124,6 +186,11 @@
       bottom: 0;
       left: 0;
       right: 0;
+
+      @include respond-to(tiny-screen) {
+        position: static;
+        display: block;
+      }
     }
   }
 }

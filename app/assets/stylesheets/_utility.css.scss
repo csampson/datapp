@@ -16,3 +16,18 @@
     padding: 0;
   }
 }
+
+// Apply rules based on loose screen sizes(widths)
+@mixin respond-to($screen-size) {
+  @if $screen-size == tiny-screen {
+    @media (max-width: 35em) { @content; }
+  }
+
+  @if $screen-size == small-screen {
+    @media (max-width: 55em) { @content; }
+  }
+
+  @if $screen-size == medium-screen {
+    @media (max-width: 75em) { @content; }
+  }
+}
