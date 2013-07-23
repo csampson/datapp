@@ -10,7 +10,7 @@ class App < ActiveRecord::Base
     self.published = true
     save!
     AdminMailer.app_published(self).deliver
-    Twitter.update("We just published a new app \"#{name}\" by @#{developer}. Check it out here http://nola-apps.com/apps/#{id}")
+    Twitter.update("We just published a new app \"#{name}\" by @#{developer}. Check it out here http://www.datapp.org/apps/#{id}")
   end
 
 end
