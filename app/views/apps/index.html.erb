@@ -11,7 +11,7 @@
     <div class="app-details">
       <h2 class='app-name'><%= app.name %></h2>
       <p class='app-developer'>by <%= app.developer %></p>
-      <p class='app-description'><%= app.description %></p>
+      <p class='app-description'><%= app.description.truncate(150) %></p>
       <%= link_to 'View', url_for(app), :class => 'view-app btn' %>
     </div>
   </li>
