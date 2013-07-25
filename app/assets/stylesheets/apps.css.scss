@@ -11,8 +11,7 @@
 }
 
 .main-header {
-  border-bottom: 1px solid #FAFAFA;
-  background: #111625;
+  background: #090B13;
   color: #FFF;
   text-align: right;
 
@@ -50,9 +49,14 @@
   }
 
   .about {
-    border-right: 1px solid #555;
-    padding-right: 1ex;
     margin-right: 1ex;
+
+    &::after {
+      content: '';
+      border-right: 1px solid #171717;
+      border-left: 1px solid #000;
+      margin-left: 1ex;
+    }
   }
 
   .twitter-follow-button {
@@ -62,19 +66,24 @@
 
 .main-pitch {
   @include clearfix;
-  border-radius: 4px;
-  border-bottom: 1px solid #FAFAFA;
-  background: #E5E5E5;
-  padding: 2.5em;
-  margin: 2.5em 0;
+  border-bottom: 1px solid #FFF;
+  background: #111625;
+  color: #FFF;
+  text-align: center;
+  height: 8em;
+  padding: 4em 0;
+  margin-top: -1em; // negate container margin-top
+  position: absolute;
+  left: 0;
+  right: 0;
 
   @include respond-to(medium-screen) {
     text-align: center;
   }
 
   p {
-    margin: 0.25em;
-    float: left;
+    text-shadow: 0 1px #000;
+    margin: 0 0 1em;
 
     @include respond-to(medium-screen) {
       margin-bottom: 1em;
@@ -82,13 +91,14 @@
   }
 
   a {
-    font-size: 125%;
+    @include box-shadow(0 4px 0 0 #322236);
+    font-size: 150%;
     padding: 0.75em 2em;
-    float: right;
 
     @include respond-to(medium-screen) {
       float: none;
       clear: left;
+      margin: 0 1em;
     }
 
     @include respond-to(small-screen) {
@@ -98,6 +108,8 @@
 }
 
 .apps {
+  padding-top: 16em; // equivalent vertical SRE of .main-pitch(and some extra space)
+
   @include clearfix;
 
   @include respond-to(medium-screen) {
