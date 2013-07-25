@@ -70,12 +70,7 @@
   background: #111625;
   color: #FFF;
   text-align: center;
-  height: 8em;
   padding: 4em 0;
-  margin-top: -1em; // negate container margin-top
-  position: absolute;
-  left: 0;
-  right: 0;
 
   @include respond-to(medium-screen) {
     text-align: center;
@@ -108,8 +103,7 @@
 }
 
 .apps {
-  padding-top: 16em; // equivalent vertical SRE of .main-pitch(and some extra space)
-
+  @extend .page-content;
   @include clearfix;
 
   @include respond-to(medium-screen) {
@@ -208,7 +202,8 @@
 }
 
 .app-submit {
-  @extend .white-box;
+  @extend .page-content;
+  @extend .page-box;
 
   form {
     display: table;
@@ -250,6 +245,7 @@
 }
 
 .app-confirmation {
+  @extend .page-content;
   text-align: center;
 
   .confirmation-message {
@@ -266,9 +262,13 @@
 }
 
 .app-show {
-  @include clearfix;
-  padding-top: 1em;
-  position: relative;
+  @extend .page-content;
+
+  .page-box {
+    @include clearfix;
+    padding-top: 1em;
+    position: relative;
+  }
 
   .page-header {
     text-align: left;
@@ -310,4 +310,9 @@
   .app-details {
     overflow: hidden;
   }
+}
+
+.about-page {
+  @extend .page-content;
+  @extend .page-box;
 }

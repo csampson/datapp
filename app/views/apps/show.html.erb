@@ -1,16 +1,18 @@
-<div class='app-show page-box'>
-  <%= image_tag @app.image.url(:medium), :class => 'app-image', :alt => '' %>
+<div class='app-show'>
+  <div class='page-box'>
+    <%= image_tag @app.image.url(:medium), :class => 'app-image', :alt => '' %>
 
-  <div class='app-details'>
-    <header class='page-header'>
-      <h2><%= @app.name %></h2>
-      <p class='app-author'>by <%= @app.developer %></p>
-    </header>
+    <div class='app-details'>
+      <header class='page-header'>
+        <h2><%= @app.name %></h2>
+        <p class='app-author'>by <%= @app.developer %></p>
+      </header>
 
-    <p><%= @app.description %></p>
+      <p><%= @app.description %></p>
 
-    <%= link_to 'Visit', @app.application_url, :class => 'visit-app btn wide' %>
+      <%= link_to 'Visit', @app.application_url, :class => 'visit-app btn wide' %>
+    </div>
   </div>
-</div>
 
-<a class='btn wide' href='/'>Back to listings</a>
+  <a class='btn wide' href='/'>Back to listings</a>
+</div>
