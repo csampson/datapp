@@ -49,18 +49,35 @@
   }
 
   .about {
-    margin-right: 1ex;
+    margin-right: 1em;
 
     &::after {
       content: '';
       border-right: 1px solid #171717;
       border-left: 1px solid #000;
-      margin-left: 1ex;
+      margin-left: 1em;
     }
   }
 
   .twitter-follow-button {
+    @include transition(background 0.25s linear);
+    border-radius: 4px;
+    background: #00658A;
+    padding: 1ex;
     vertical-align: middle;
+
+    &::before {
+      content: '';
+      background: url('/assets/twitter-logo-light.png');
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:focus, &:hover {
+      background: #007BA8;
+    }
   }
 }
 
